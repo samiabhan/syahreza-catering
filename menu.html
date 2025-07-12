@@ -58,54 +58,27 @@
 </head>
 <body>
     <!-- Header Navigation -->
-    <header class="bg-white shadow-md fixed w-full z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <div class="text-2xl font-bold text-green-800">SYAHREZA</div>
-                    <div class="text-xl ml-1 text-gray-600">Catering Bogor</div>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-600 hover:text-green-800">Home</a>
-                    <a href="menu.html" class="nav-link text-green-800 font-medium">Menu</a>
-                    <a href="tentang.html" class="nav-link text-gray-600 hover:text-green-800">Tentang Kami</a>
-                    <a href="order.html" class="nav-link bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800">Order Sekarang</a>
-                </nav>
-                <button class="md:hidden focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+<header class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-green-800">SYAHREZA</div>
+                <div class="text-xl ml-1 text-gray-600">Catering Bogor</div>
             </div>
+            <nav class="hidden md:flex space-x-8" id="navbar">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-green-800">Home</a>
+                <a href="menu.html" class="nav-link text-green-800 font-medium">Menu</a>
+                <a href="tentang.html" class="nav-link text-gray-600 hover:text-green-800">Tentang Kami</a>
+                <a href="order.html" class="nav-link bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800">Order Sekarang</a>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
         </div>
-    </header>
-  <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-6 items-center">
-        <a href="index.html" class="text-green-800 font-medium hover:text-green-600">Home</a>
-        <a href="menu.html" class="hover:text-green-800">Menu</a>
-        <a href="tentang.html" class="hover:text-green-800">Tentang Kami</a>
-        <a href="order.html" class="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800">Order</a>
-        
-      </nav>
-
-      <!-- Mobile Button -->
-      <button id="menu-button" class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
-        </svg>
-      </button>
     </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white space-y-2">
-      <a href="index.html" class="block text-green-800 font-medium">Home</a>
-      <a href="menu.html" class="block hover:text-green-800">Menu</a>
-      <a href="tentang.html" class="block hover:text-green-800">Tentang Kami</a>
-      <a href="order.html" class="block bg-green-700 text-white px-4 py-2 rounded-full text-center hover:bg-green-800">Order</a>
-      <a href="https://wa.me/083811902668" target="_blank" class="block text-green-700 underline">WhatsApp</a>
-    </div>
-  </header>
-
+</header>
     <!-- Menu Hero Section -->
     <section class="menu-hero min-h-96 flex items-center justify-center pt-20">
         <div class="container mx-auto px-6 text-center">
