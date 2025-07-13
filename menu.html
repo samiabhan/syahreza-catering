@@ -58,27 +58,55 @@
 </head>
 <body>
     <!-- Header Navigation -->
-<header class="bg-white shadow-md fixed w-full z-50">
-    <div class="container mx-auto px-6 py-3">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center">
-                <div class="text-2xl font-bold text-green-800">SYAHREZA</div>
-                <div class="text-xl ml-1 text-gray-600">Catering Bogor</div>
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-green-800">SYAHREZA</div>
+                    <div class="text-xl ml-1 text-gray-600">Catering Bogor</div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-green-800">Home</a>
+                    <a href="menu.html" class="nav-link text-green-800 font-medium">Menu</a>
+                    <a href="tentang.html" class="nav-link text-gray-600 hover:text-green-800">Tentang Kami</a>
+                    <a href="order.html" class="nav-link bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800">Order Sekarang</a>
+                </nav>
+                <button class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
-            <nav class="hidden md:flex space-x-8" id="navbar">
-                <a href="index.html" class="nav-link text-gray-600 hover:text-green-800">Home</a>
-                <a href="menu.html" class="nav-link text-green-800 font-medium">Menu</a>
-                <a href="tentang.html" class="nav-link text-gray-600 hover:text-green-800">Tentang Kami</a>
-                <a href="order.html" class="nav-link bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800">Order Sekarang</a>
-            </nav>
-            <button class="md:hidden focus:outline-none" id="menu-toggle">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
         </div>
+    </header>
+
+     <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="text-green-800 font-medium hover:text-green-600">Home</a>
+        <a href="menu.html" class="hover:text-green-800">Menu</a>
+        <a href="tentang.html" class="hover:text-green-800">Tentang Kami</a>
+        <a href="order.html" class="bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-800">Order</a>
+        
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-button" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6 text-green-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
     </div>
-</header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 bg-white space-y-2">
+      <a href="index.html" class="block text-green-800 font-medium">Home</a>
+      <a href="menu.html" class="block hover:text-green-800">Menu</a>
+      <a href="tentang.html" class="block hover:text-green-800">Tentang Kami</a>
+      <a href="order.html" class="block bg-green-700 text-white px-4 py-2 rounded-full text-center hover:bg-green-800">Order</a>
+    </div>
+  </header>
+
+
     <!-- Menu Hero Section -->
     <section class="menu-hero min-h-96 flex items-center justify-center pt-20">
         <div class="container mx-auto px-6 text-center">
@@ -86,6 +114,7 @@
             <p class="text-xl mb-8 text-white max-w-2xl mx-auto">Nikmati berbagai pilihan makanan lezat untuk acara spesial Anda</p>
         </div>
     </section>
+
 
     <!-- Main Menu Content -->
     <section class="py-12 bg-white">
@@ -316,43 +345,60 @@
             </div>
         </div>
     </footer>
+!-- Mobile Menu -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+        <div class="flex justify-around py-3">
+            <a href="index.html" class="flex flex-col items-center text-gray-700">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">Home</span>
+            </a>
+            <a href="menu.html" class="flex flex-col items-center text-green-600">
+                <i class="fas fa-info-circle text-xl"></i>
+                <span class="text-xs mt-1">Menu</span>
+            </a>
+            <a href="tentang.html" class="flex flex-col items-center text-gray-700">
+                <i class="fas fa-utensils text-xl"></i>
+                <span class="text-xs mt-1">Tentang Kami</span>
+            </a>
+            <a href="order.html" class="flex flex-col items-center text-gray-700">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">Order</span>
+            </a>
+        </div>
+    </div>
 
     <script>
-        // Category filter functionality
+        // Simple animation for when elements come into view
         document.addEventListener('DOMContentLoaded', function() {
-            const categoryBtns = document.querySelectorAll('.category-btn');
-            
-            categoryBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    categoryBtns.forEach(b => {
-                        b.classList.remove('active', 'bg-green-700', 'text-white');
-                        b.classList.add('border', 'border-green-700', 'text-green-700');
-                    });
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.team-card, .food-card, .section-title');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
                     
-                    // Add active class to clicked button
-                    this.classList.add('active', 'bg-green-700', 'text-white');
-                    this.classList.remove('border', 'border-green-700', 'text-green-700');
-                    
-                    // Get category to filter
-                    const category = this.dataset.category;
-                    const allCategories = document.querySelectorAll('.menu-category');
-                    
-                    // Show/hide categories
-                    if (category === 'all') {
-                        allCategories.forEach(cat => cat.style.display = 'block');
-                    } else {
-                        allCategories.forEach(cat => {
-                            if (cat.dataset.category === category) {
-                                cat.style.display = 'block';
-                            } else {
-                                cat.style.display = 'none';
-                            }
-                        });
+                    if(elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
                     }
                 });
+            };
+            
+            // Set initial state
+            const animatedElements = document.querySelectorAll('.team-card, .food-card');
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.6s ease';
             });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Run once on load
         });
     </script>
+</body>
+</html>
+
+    
 </body>
 </html>
